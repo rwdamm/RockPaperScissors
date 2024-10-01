@@ -11,10 +11,29 @@ function getComputerChoice(){
         return "rock"
     }
 }
+
+let buttons = document.querySelector('#buttons');
+
+buttons.addEventListener("click", (buttonEvent) => {
+    let target = buttonEvent.target;
+    console.log(target.id);
+    switch(target.id){
+        case "rockButton":
+            console.log('rock');
+            break;
+        case "paperButton":
+            console.log('paper');
+            break;
+        case "scissorsButton":
+            console.log('scissor');
+            break;
+    }
+})
+
 //console.log ("Computer choose " + getComputerChoice());
 
-function  getHumanChoice(){
-   let choice = prompt("Choose [r]ock, [p]aper or [s]issors");
+/*function  getHumanChoice(){
+   let choice = prompt("Choose [r]ock, [p]aper or [s]cissors");
    if (choice.charAt(0) === "r" || choice.charAt(0) === "R"){
     return "rock"
    }
@@ -24,7 +43,7 @@ function  getHumanChoice(){
    else if (choice.charAt(0) === "s" || choice.charAt(0) === "S"){
     return "scissors"
    }
-}
+}*/
 
 //console.log("Human choose: " + getHumanChoice());
 
