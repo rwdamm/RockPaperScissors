@@ -49,6 +49,15 @@ function updateDisplay (text){
     content.textContent = text;
     scoreText.textContent = 
     ("Computer " + computerScore + " : Human " + humanScore);
+    if (humanScore > 4){
+        content.textContent = "YOU WIN YOU WIN YOU WIN";
+        scoreText.textContent = "!!!!!!First to 5 Wins!!!!!!!";
+    }
+    if (computerScore > 4){
+        content.textContent = "YOU LOSE YOU LOSE YOU LOSE";
+        scoreText.textContent = "Computer was first to 5 wins";
+    }
+
     display.appendChild(content);
     display.appendChild(scoreText);
 
